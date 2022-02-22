@@ -1,18 +1,89 @@
-const buttonElement = document.querySelector('.btn')
-const displayElement = document.querySelector('.fieldSpace')
-const textBoxElement = document.querySelector('.inputBox')
+
+let randomNumber = Math.ceil((Math.random() * 100))
+
+const btn = document.querySelector('.btn')
+const fieldSpace = document.querySelector('.fieldSpace')
+const inputBox = document.querySelector('.inputBox')
 
 
-var numberInput = textBoxElement.value
+function guessingGame() {
+	const num = Number(inputBox.value);
 
-if (numberInput !== "") {
-    displayElement.innerHTML = hello.errorBoth();
+	if (num < randomNumber) {
+		fieldSpace.innerHTML = "Your guess is too low";
+	} else if (num > randomNumber) {
+		fieldSpace.innerHTML = "Your guess is too high";
+	} else {
+		fieldSpace.innerHTML =  `Correct, the secret number is ${num}`;
+	}
+
+
+	setTimeout(function(){
+		display.innerHTML = "";
+	}, 2000);
+
 
 }
 
+btn.addEventListener('click', guessingGame)
 
 
 
 
 
-buttonElement.addEventListener('click', checked);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var hello = Guessing()
+
+// var numberInput = textBoxElement.value
+
+// let randomNumber = Math.ceil((Math.random() * 100))
+
+
+// if (numberInput <= 50) {
+//     displayElement.innerHTML = hello.count();
+
+// }
+
+
+
+
+
+
+// buttonElement.addEventListener('click', checked);
