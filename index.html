@@ -6,13 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="guessing.css">
 </head>
 
 <body>
-    <h1 class="heading">Guessing game</h1>
-    <input class="inputBox" type="number" name="Number" id="Number">
-    <button class="btn">Guess</button>
-    <div class="fieldSpace"></div>
+    <div class="container">
+        <h1 class="heading">Guessing game</h1>
+        <input class="inputBox" type="number" name="Number" id="Number" min="1" max="100">
+        <button class="btn">Guess</button>
+        <div class="fieldSpace"></div>
+
+    </div>
+
 </body>
 <script src="guess.js"></script>
+
 </html>
