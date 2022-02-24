@@ -15,6 +15,7 @@ function guessingGame() {
         fieldSpace.innerHTML = "Your guess is too high";
     } else {
         fieldSpace.innerHTML = `Correct, the secret number is ${num}`;
+        timeOut()
     }
 
 
@@ -22,12 +23,14 @@ function guessingGame() {
         display.innerHTML = "";
     }, 2000);
 
-
 }
 
 function timeOut() {
-    fieldSpace.innerHTML = "Game started!"
-    randomNumber = Math.ceil((Math.random() * 100))
+    setTimeout(function () {
+        fieldSpace.innerHTML = "New game sterted!";
+        randomNumber = Math.ceil((Math.random() * 100))
+    }, 5000);
+
 }
 
 
