@@ -19,9 +19,9 @@ function guessingGame() {
     }
 
 
-    setTimeout(function () {
-        display.innerHTML = "";
-    }, 2000);
+    // setTimeout(function () {
+    //     fieldSpace.innerHTML = "";
+    // }, 3000);
 
 }
 
@@ -30,7 +30,6 @@ function timeOut() {
         fieldSpace.innerHTML = "New game sterted!";
         randomNumber = Math.ceil((Math.random() * 100))
     }, 5000);
-
 }
 
 
