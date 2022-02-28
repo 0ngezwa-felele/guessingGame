@@ -9,20 +9,27 @@ const inputBox = document.querySelector('.inputBox')
 function guessingGame() {
     const num = Number(inputBox.value);
 
+    if (num > 100 ||num < 1 ) {
+        fieldSpace.innerHTML = "Enter the correct number!";
+        return
+    }
+
     if (num < randomNumber) {
         fieldSpace.innerHTML = "Your guess is too low";
+
     } else if (num > randomNumber) {
         fieldSpace.innerHTML = "Your guess is too high";
-    } else if (num > 100 && num < 1) {
-        fieldSpace.innerHTML = "enter the correct number";
-    } else {
+
+    }
+    else {
         fieldSpace.innerHTML = `Correct, the secret number is ${num}`;
         timeOut()
     }
-
-
-
 }
+
+
+
+
 
 
 
