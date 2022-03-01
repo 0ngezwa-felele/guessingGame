@@ -10,7 +10,7 @@ function guessingGame() {
     const num = Number(inputBox.value);
 
     if (num > 100 ||num < 1 ) {
-        fieldSpace.innerHTML = "Enter the correct number!";
+        fieldSpace.innerHTML = "Enter a number within the range of 1 to 100!";
         return
     }
 
@@ -42,7 +42,7 @@ function guessingGame() {
 
 function timeOut() {
     setTimeout(function () {
-        fieldSpace.innerHTML = "New game sterted!";
+        fieldSpace.innerHTML = "New game started!";
         randomNumber = Math.ceil((Math.random() * 100))
     }, 5000);
 }
